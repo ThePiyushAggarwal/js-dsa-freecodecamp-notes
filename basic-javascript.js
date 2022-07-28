@@ -78,3 +78,14 @@ function countup(n) {
   }
 }
 console.log(countup(5)); // [1,2,3,4,5]
+
+// Use Recursion to Create a Range of Numbers
+function rangeOfNumbers(startNum, endNum) {
+  if(endNum-startNum===0) {
+    return [startNum]
+  } else {
+    const range = rangeOfNumbers(startNum+1, endNum)
+    range.unshift(startNum)
+    return range
+  }
+};
